@@ -1,10 +1,26 @@
 <!DOCTYPE html>
+@import helper._
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="utf-8">
+    <title>Northwest Passage</title>
 </head>
 <body>
-$END$
+<h1>Shame</h1>
+<p>You are back at home port with nothing to show for it.
+    Better get going before someone notices.
+</p>
+<form action="@routes.GameController.postWestFromEngland" method="POST">
+    @CSRF.formField
+    <input type="submit" value="Sail West"/>
+</form>
+<form action="@routes.GameController.postNorthFromEngland" method="POST">
+    @CSRF.formField
+    <input type="submit" value="Sail North"/>
+</form>
+<form action="@routes.GameController.postEastFromEngland" method="POST">
+    @CSRF.formField
+    <input type="submit" value="Sail East"/>
+</form>
 </body>
 </html>

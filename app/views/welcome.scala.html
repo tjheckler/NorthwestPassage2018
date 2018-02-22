@@ -1,10 +1,22 @@
 <!DOCTYPE html>
+@import helper._
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="utf-8">
+    <title>Northwest Passage</title>
 </head>
 <body>
-$END$
+<h1>Northwest Passage</h1>
+<h2>A Game of Cunning and Skill</h2>
+<p>
+    This game is meant to be played by only the most skilled gamers.  Play at your own risk!
+</p>
+<form action="@routes.GameController.postStart" method="POST">
+    @CSRF.formField
+    <input type="submit" value="Let's Do This!"/>
+</form>
+<form action="@routes.GameController.getKittens" method="GET">
+    <input type="submit" value="Kittens"/>
+</form>
 </body>
 </html>
