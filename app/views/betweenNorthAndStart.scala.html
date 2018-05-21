@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+@import helper._
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Northwest Passage</title>
+</head>
+<body>
+<p>
+    The Sea is getting colder. The whales are spewing ocean water near your ship,
+    when the water comes back down, the frozen water spears impale anything under it. The whales do not appear to be leaving
+    any time soon. With the rocking of the ship, you do not know if you will perish, or luckily be able to proceed.
+
+</p>
+<form action="@routes.GameController.postHomePort" method="POST">
+    @CSRF.formField
+    <input type="submit" value="Sail back South"/>
+</form>
+<form action="@routes.GameController.postNorthFromEngland" method="POST">
+    @CSRF.formField
+    <input type="submit" value="Keep trying to sail North"/>
+</form>
+</body>
+</html>
