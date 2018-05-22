@@ -7,6 +7,8 @@ import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 
+
+
 import javax.inject.Inject;
 
 public class GameController extends Controller
@@ -19,6 +21,7 @@ public class GameController extends Controller
     }
     public Result getWelcome()
     {
+
         return ok(views.html.welcome.render());
     }
 
@@ -27,6 +30,12 @@ public class GameController extends Controller
         DynamicForm form = formFactory.form().bindFromRequest();
         String name = form.get("name");
         session().put("name",name);
+
+
+        return ok(views.html.start.render());
+    }
+    public Result getStart()
+    {
 
         return ok(views.html.start.render());
     }

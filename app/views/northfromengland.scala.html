@@ -20,5 +20,9 @@
     @CSRF.formField
     <input type="submit" value="New Player"/>
 </form>
+<form action="@routes.GameController.getStart" method="get">
+    @CSRF.formField
+    <input type="submit" value="Play Again"/>
+</form>
 </body>
 </html>
