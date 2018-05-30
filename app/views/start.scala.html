@@ -21,17 +21,17 @@
     However, some of your crew believe you should try going east over Russia or north over the top of the world instead.
 </p>
     <div class="row">
-<form class="col-md-2" action="@routes.GameController.postWestFromEngland" method="POST">
+<form class="col-md-4" action="@routes.GameController.postWestFromEngland" method="POST">
     @CSRF.formField
     <input class="btn btn-primary" type="submit" value="Sail West"/>
 </form>
     <br>
-<form class="col-md-2" action="@routes.GameController.postBetweenNorthAndStart" method="POST">
+<form class="col-md-4" action="@routes.GameController.postBetweenNorthAndStart" method="POST">
     @CSRF.formField
     <input class="btn btn-primary" type="submit" value="Sail North"/>
 </form>
     <br>
-<form class="col-md-2" action="@routes.GameController.postEastFromEngland" method="POST">
+<form class="col-md-4" action="@routes.GameController.postEastFromEngland" method="POST">
     @CSRF.formField
     <input class="btn btn-primary" type="submit" value="Sail East"/>
 </form>

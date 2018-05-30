@@ -22,11 +22,11 @@
 
 </p>
 <div class="row">
-<form class="col-md-2" action="@routes.GameController.postHomePort" method="POST">
+<form class="col-md-6" action="@routes.GameController.postHomePort" method="POST">
     @CSRF.formField
     <input class="btn btn-primary" type="submit" value="Sail back South"/>
 </form>
-<form class="col-md-2" action="@routes.GameController.postNorthFromEngland" method="POST">
+<form class="col-md-6" action="@routes.GameController.postNorthFromEngland" method="POST">
     @CSRF.formField
     <input class="btn btn-primary" type="submit" value="Keep trying to sail North"/>
 </form>

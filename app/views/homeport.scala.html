@@ -19,15 +19,15 @@
     Better get going before someone notices.
 </p>
     <div class="row">
-<form class="col-md-2" action="@routes.GameController.postWestFromEngland" method="POST">
+<form class="col-md-4" action="@routes.GameController.postWestFromEngland" method="POST">
     @CSRF.formField
     <input class="btn btn-primary" type="submit" value="Sail West"/>
 </form>
-<form class="col-md-2" action="@routes.GameController.postNorthFromEngland" method="POST">
+<form class="col-md-4" action="@routes.GameController.postNorthFromEngland" method="POST">
     @CSRF.formField
     <input class="btn btn-primary" type="submit" value="Sail North"/>
 </form>
-<form class="col-md-2" action="@routes.GameController.postEastFromEngland" method="POST">
+<form class="col-md-4" action="@routes.GameController.postEastFromEngland" method="POST">
     @CSRF.formField
     <input class="btn btn-primary" type="submit" value="Sail East"/>
 </form>

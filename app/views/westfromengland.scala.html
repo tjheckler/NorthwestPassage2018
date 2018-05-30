@@ -27,12 +27,12 @@
 
 <div class="row">
 
-<form class="col=md-2" action="@routes.GameController.postHomePort" method="POST">
+<form class="col-md-6" action="@routes.GameController.postHomePort" method="POST">
     @CSRF.formField
     <input class="btn btn-primary" type="submit" value="Cowardly sail back to England"/>
 </form>
     <br>
-<form class="col-md-2" action="@routes.GameController.postWestEnd" method="POST">
+<form class="col-md-6" action="@routes.GameController.postWestEnd" method="POST">
     @CSRF.formField
     <input class="btn btn-primary" type="submit" value="Bravely sail west into the unknown"/>
 </form>

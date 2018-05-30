@@ -21,11 +21,11 @@
     You are afraid you may run aground and be eaten by one of the roving bands of feral kittens you see frolicking upon the shore.
 </p>
     <div class="row">
-<form class="col-md-2" action="@routes.GameController.postHomePort" method="POST">
+<form class="col-md-6" action="@routes.GameController.postHomePort" method="POST">
     @CSRF.formField
     <input class="btn btn-primary" type="submit" value="Sail back West"/>
 </form>
-<form class="col-md-2" action="@routes.GameController.postEastEnd" method="POST">
+<form class="col-md-6" action="@routes.GameController.postEastEnd" method="POST">
     @CSRF.formField
     <input class="btn btn-primary" type="submit" value="Keep trying to sail East"/>
 </form>
