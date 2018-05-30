@@ -19,18 +19,19 @@
 <p>
     This game is meant to be played by only the most skilled gamers.  Play at your own risk!
 </p>
-
+<div class="container">
 <form action="@routes.GameController.postStart" method="POST">
     @CSRF.formField
    Enter Your Name: <input class="rounded" type="text " name="name">
     <br>
     <br>
-    <input class="btn btn-primary" type="submit" value="Let's Do This!"/>
+    <input class="btn btn-primary col-md-4" type="submit" value="Let's Do This!"/>
 </form>
 <br>
 <form cla action="@routes.GameController.getKittens" method="GET">
-    <input class="btn btn-primary" type="submit" value="Kittens"/>
+    <input class="btn btn-primary col-md-4" type="submit" value="Kittens"/>
 </form>
+</div>
 </div>
 </body>
 </html>
