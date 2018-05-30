@@ -4,22 +4,33 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
     <title>Northwest Passage</title>
 </head>
 <body>
-<img src="assets/images/England.jpg" width="200">
+<div class="jumbotron">
+    <div class="container">
+<img class="rounded" src="assets/images/England.jpg" width="200">
 <h1>Northwest Passage</h1>
 <h2>A Game of Cunning and Skill</h2>
+    </div>
+</div>
+<div class="container">
 <p>
     This game is meant to be played by only the most skilled gamers.  Play at your own risk!
 </p>
+
 <form action="@routes.GameController.postStart" method="POST">
     @CSRF.formField
-   Enter Your Name: <input type="text " name="name"><br>
-    <input type="submit" value="Let's Do This!"/>
+   Enter Your Name: <input class="rounded" type="text " name="name">
+    <br>
+    <br>
+    <input class="btn btn-primary" type="submit" value="Let's Do This!"/>
 </form>
-<form action="@routes.GameController.getKittens" method="GET">
-    <input type="submit" value="Kittens"/>
+<br>
+<form cla action="@routes.GameController.getKittens" method="GET">
+    <input class="btn btn-primary" type="submit" value="Kittens"/>
 </form>
+</div>
 </body>
 </html>
