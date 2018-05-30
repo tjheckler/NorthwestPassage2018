@@ -3,11 +3,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
     <title>Northwest Passage</title>
 </head>
 <body>
-<img src="assets/images/Alaska.jpg" width="200">
+<div class="jumbotron">
+    <div class="container">
+<img class="rounded" src="assets/images/Alaska.jpg" width="200">
 <h1>Icebergs Everywhere</h1>
+</div>
+</div>
+<div class="container">
 <p>You sail for months and see a lot of icebergs.
     Food is running out and the crew is starting to get scurvy.
     A small building resembling an outhouse appears on the deck of your ship.
@@ -17,13 +23,19 @@
     The crew takes the pills and are healed the next day.
     You feel better now and think you see a clear path through the iceburgs.
 </p>
-<form action="@routes.GameController.postHomePort" method="POST">
+
+<div class="row">
+
+<form class="col=md-2" action="@routes.GameController.postHomePort" method="POST">
     @CSRF.formField
-    <input type="submit" value="Cowardly sail back to England"/>
+    <input class="btn btn-primary" type="submit" value="Cowardly sail back to England"/>
 </form>
-<form action="@routes.GameController.postWestEnd" method="POST">
+    <br>
+<form class="col-md-2" action="@routes.GameController.postWestEnd" method="POST">
     @CSRF.formField
-    <input type="submit" value="Bravely sail west into the unknown"/>
+    <input class="btn btn-primary" type="submit" value="Bravely sail west into the unknown"/>
 </form>
+    </div>
+</div>
 </body>
 </html>
