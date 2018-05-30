@@ -3,23 +3,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
     <title>Northwest Passage</title>
 </head>
 <body>
-<img src="assets/images/Whales.jpg" width="200">
+<div class="jumbotron">
+    <div class="container">
+<img class="rounded" src="assets/images/Whales.jpg" width="200">
+<h1>Whales Everywhere!</h1>
+    </div>
+</div>
+<div class="container">
 <p>
     The Sea is getting colder. The whales are spewing ocean water near your ship,
     when the water comes back down, the frozen water spears impale anything under it. The whales do not appear to be leaving
     any time soon. With the rocking of the ship, you do not know if you will perish, or luckily be able to proceed.
 
 </p>
-<form action="@routes.GameController.postHomePort" method="POST">
+<div class="row">
+<form class="col-md-2" action="@routes.GameController.postHomePort" method="POST">
     @CSRF.formField
-    <input type="submit" value="Sail back South"/>
+    <input class="btn btn-primary" type="submit" value="Sail back South"/>
 </form>
-<form action="@routes.GameController.postNorthFromEngland" method="POST">
+<form class="col-md-2" action="@routes.GameController.postNorthFromEngland" method="POST">
     @CSRF.formField
-    <input type="submit" value="Keep trying to sail North"/>
+    <input class="btn btn-primary" type="submit" value="Keep trying to sail North"/>
 </form>
+</div>
+</div>
 </body>
 </html>

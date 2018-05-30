@@ -4,11 +4,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
     <title>Northwest Passage</title>
 </head>
 <body>
-<img src="assets/images/IcyOcean.jpg" width="200">
+<div class="jumbotron">
+    <div class="container">
+<img class="rounded" src="assets/images/IcyOcean.jpg" width="200">
 <h1>Too Much Ice</h1>
+    </div>
+</div>
+<div class="container">
 <p>You should have known if it was that easy someone would have done it already.
     Your ship is hit by an iceberg.
     You and your crew fall into the sea and are attacked by giant coelacanths.
@@ -17,13 +23,17 @@
     Years later you are rescued by a ship named Titanic on its way to the New World.
     The end for @name.
 </p>
-<form action="@routes.GameController.getWelcome" method="get">
+    <div class="row">
+<form class="col-md-2" action="@routes.GameController.getWelcome" method="get">
     @CSRF.formField
-    <input type="submit" value="New Player"/>
+    <input class="btn btn-primary" type="submit" value="New Player"/>
 </form>
-<form action="@routes.GameController.getStart" method="get">
+<form class="col-md-2" action="@routes.GameController.getStart" method="get">
     @CSRF.formField
-    <input type="submit" value="Play Again"/>
+    <input class="btn btn-primary" type="submit" value="Play Again"/>
 </form>
+    </div>
+    </div>
+</div>
 </body>
 </html>
