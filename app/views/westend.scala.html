@@ -4,23 +4,34 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
     <title>Northwest Passage</title>
 </head>
 <body>
-<img src="assets/images/china.jpg" width="200">
+<div class="jumbotron">
+    <div class="container">
+
+
+<img class="rounded" src="assets/images/china.jpg" width="200">
 <h1>Winning Like Someone who Wins a Lot</h1>
+    </div>
+</div>
+<div class="container">
 <p>You reach China and load up on fidget spinners.
     When you get back to England the Queen rewards you with a monopoly on importing them.
     You spin happily ever after.
     The end for @name.
 </p>
-<form action="@routes.GameController.getWelcome" method="get">
+    <div class="row">
+<form class="col-md-2" action="@routes.GameController.getWelcome" method="get">
     @CSRF.formField
-    <input type="submit" value="New Player"/>
+    <input class="btn btn-primary" type="submit" value="New Player"/>
 </form>
-<form action="@routes.GameController.getStart" method="get">
+<form class="col-md-2" action="@routes.GameController.getStart" method="get">
     @CSRF.formField
-    <input type="submit" value="Play Again"/>
+    <input class="btn btn-primary" type="submit" value="Play Again"/>
 </form>
+    </div>
+</div>
 </body>
 </html>
