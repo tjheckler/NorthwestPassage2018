@@ -3,25 +3,34 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
     <title>Northwest Passage</title>
 </head>
 <body>
-<img src="assets/images/England.jpg" width="200">
+<div class="jumbotron">
+    <div class="container">
+<img class="rounded" src="assets/images/England.jpg" width="200">
 <h1>Shame</h1>
+    </div>
+</div>
+<div class="container">
 <p>You are back at home port with nothing to show for it.
     Better get going before someone notices.
 </p>
-<form action="@routes.GameController.postWestFromEngland" method="POST">
+    <div class="row">
+<form class="col-md-2" action="@routes.GameController.postWestFromEngland" method="POST">
     @CSRF.formField
-    <input type="submit" value="Sail West"/>
+    <input class="btn btn-primary" type="submit" value="Sail West"/>
 </form>
-<form action="@routes.GameController.postNorthFromEngland" method="POST">
+<form class="col-md-2" action="@routes.GameController.postNorthFromEngland" method="POST">
     @CSRF.formField
-    <input type="submit" value="Sail North"/>
+    <input class="btn btn-primary" type="submit" value="Sail North"/>
 </form>
-<form action="@routes.GameController.postEastFromEngland" method="POST">
+<form class="col-md-2" action="@routes.GameController.postEastFromEngland" method="POST">
     @CSRF.formField
-    <input type="submit" value="Sail East"/>
+    <input class="btn btn-primary" type="submit" value="Sail East"/>
 </form>
+    </div>
+</div>
 </body>
 </html>
