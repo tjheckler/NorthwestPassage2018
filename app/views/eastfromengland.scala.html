@@ -3,22 +3,34 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
     <title>Northwest Passage</title>
 </head>
+
 <body>
-<img src="assets/images/islands.jpg" width="200">
+<div class="jumbotron">
+    <div class="container">
+<img class="rounded" src="assets/images/islands.jpg" width="200">
 <h1>Too Much Land</h1>
+    </div>
+</div>
+<div class="container">
 <p>This way is not looking very promising.
     You keep going in and out of bays trying to find a way east but you always run into land.
     You are afraid you may run aground and be eaten by one of the roving bands of feral kittens you see frolicking upon the shore.
 </p>
-<form action="@routes.GameController.postHomePort" method="POST">
+    <div class="row">
+<form class="col-md-2" action="@routes.GameController.postHomePort" method="POST">
     @CSRF.formField
-    <input type="submit" value="Sail back West"/>
+    <input class="btn btn-primary" type="submit" value="Sail back West"/>
 </form>
-<form action="@routes.GameController.postEastEnd" method="POST">
+<form class="col-md-2" action="@routes.GameController.postEastEnd" method="POST">
     @CSRF.formField
-    <input type="submit" value="Keep trying to sail East"/>
+    <input class="btn btn-primary" type="submit" value="Keep trying to sail East"/>
 </form>
+    </div>
+</div>
 </body>
+
+
 </html>
