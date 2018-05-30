@@ -4,23 +4,32 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
     <title>Northwest Passage</title>
 </head>
 <body>
-<img src="assets/images/Land.jpg" width="200">
+<div class="jumbotron">
+    <div class="container">
+<img class="rounded" src="assets/images/Land.jpg" width="200">
 <h1>Too Much Trying to go East</h1>
+    </div>
+</div>
+<div class="container">
 <p>You should have paid more attention to your intuition.
     You run ashore while trying to turn around in the latest dead end bay.
     While trying to patch up the ship you and your crew are almost eaten by a rampaging herd of feral kittens.
     The kittens destroy what remains of your ship.  A passing Viking Cruise ship picks you up and takes you back to port in disgrace. The end for @name.
 </p>
-<form action="@routes.GameController.getWelcome" method="get">
+    <div class="row">
+<form class="col-md-2" action="@routes.GameController.getWelcome" method="get">
     @CSRF.formField
-    <input type="submit" value="New Player"/>
+    <input class="btn btn-primary" type="submit" value="New Player"/>
 </form>
-<form action="@routes.GameController.getStart" method="get">
+<form class="col-md-2" action="@routes.GameController.getStart" method="get">
     @CSRF.formField
-    <input type="submit" value="Play Again"/>
+    <input class="btn btn-primary" type="submit" value="Play Again"/>
 </form>
+</div>
+</div>
 </body>
 </html>
